@@ -5,13 +5,14 @@ import ListaMesas from './components/ListaMesas';
 import EditarMesa from './components/EditarMesa';
 import Header from './components/Header';
 import './styles.css';
+import './App.css';
 
-function App() {
+function ControladorRutasRoles() {
   const [rol, setRol] = useState('cliente'); // Cambia entre 'cliente' y 'admin'
 
   return (
     <Router>
-      <div className="App">
+      <div className="ControladorRutasRoles">
         <Header rol={rol} setRol={setRol} />
         <Routes>
           <Route path="/" element={<ReservaForm />} />
@@ -27,4 +28,4 @@ function App() {
   );
 }
 
-export default App;
+export default ControladorRutasRoles;
